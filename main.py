@@ -16,18 +16,36 @@ def registrar_evento():
     print("El evento ha sido registrado exitosamente")
     main()
 
-def vender_tickets():
-    print("Venta de tickets")
-    lugar = input("Ingrese el lugar del evento: ")
-    numero_tickets = input("Ingrese el número de tickets a vender: ")
-    print("El evento ha sido registrado exitosamente")
-    main()
 
 def comprar_tickets():
     print("Compra de tickets")
     lugar = input("Ingrese el lugar del evento: ")
-    numero_tickets = input("Ingrese el número de tickets a vender: ")
-    print("El evento ha sido registrado exitosamente")
+    numero_tickets = input("Ingrese el número de tickets a comprar: ")
+    print("El costo de la compra es de: $100")
+    main()
+
+def mostrar_eventos():
+    eventos = ["Evento 1", "Evento 2", "Evento 3"]
+    for evento in eventos:
+        print(evento)
+    
+def mostrar_eventos_por_fechas():
+    eventos = ["Evento 1", "Evento 2", "Evento 3"]
+    fechas = ["Fecha 1", "Fecha 2", "Fecha 3"]
+    
+    eventos_fechas =  zip(eventos, fechas)
+    for evento,fecha in eventos_fechas:
+        print("El evento " + evento + " se llevará a cabo el día " + fecha)
+    main()
+    
+
+def mostrar_eventos_por_lugar():
+    eventos = ["Evento 1", "Evento 2", "Evento 3"]
+    lugares = ["Lugar 1", "Lugar 2", "Lugar 3"]
+    
+    eventos_lugares =  zip(eventos, lugares)
+    for evento,lugar in eventos_lugares:
+        print("El evento " + evento + " se llevará a cabo en el lugar " + lugar)
     main()
 
 def consultar_eventos():
@@ -39,15 +57,47 @@ def consultar_eventos():
     opcion = input("Ingrese una opción: ")
     if opcion == "1":
         print("Ver todos los eventos")
+        mostrar_eventos()
     elif opcion == "2":
         print("Ver eventos por fecha")
+        mostrar_eventos_por_fechas()
     elif opcion == "3":
         print("Ver eventos por lugar")
+        mostrar_eventos_por_lugar()
     elif opcion == "4":
         main()
     else:
         print("Opción inválida")
 
+
+
+def mostrar_todos_los_tickets():
+    print("Ver todos los tickets")
+    tickets= ["Ticket 1", "Ticket 2", "Ticket 3"]
+    for ticket in tickets:
+        print(ticket)
+    main()
+
+def mostrar_tickets_por_fecha():
+    eventos = ["Evento 1", "Evento 2", "Evento 3"]
+    tickets = ["Ticket 1", "Ticket 2", "Ticket 3"]
+    fechas = ["Fecha 1", "Fecha 2", "Fecha 3"]
+    
+    tickets_fechas =  zip(eventos, tickets, fechas)
+    for evento,ticket,fecha in tickets_fechas:
+        print("El ticket " + ticket + " para el evento " + evento + " se llevará a cabo el día " + fecha)
+    main()
+
+
+def mostrar_tickets_por_lugar():
+    eventos = ["Evento 1", "Evento 2", "Evento 3"]
+    tickets = ["Ticket 1", "Ticket 2", "Ticket 3"]
+    lugares = ["Lugar 1", "Lugar 2", "Lugar 3"]
+    
+    tickets_lugares =  zip(eventos, tickets, lugares)
+    for evento,ticket,lugar in tickets_lugares:
+        print("El ticket " + ticket + " para el evento " + evento + " se llevará a cabo en el lugar " + lugar)
+    main()
 
 def consultar_tickets():
     print("Consultar tickets")
@@ -57,11 +107,11 @@ def consultar_tickets():
     print("4. Volver")
     opcion = input("Ingrese una opción: ")
     if opcion == "1":
-        print("Ver todos los tickets")
+        mostrar_todos_los_tickets()
     elif opcion == "2":
-        print("Ver tickets por fecha")
+        mostrar_tickets_por_fecha()
     elif opcion == "3":
-        print("Ver tickets por lugar")
+        mostrar_tickets_por_lugar()
     elif opcion == "4":
         main()
     else:
