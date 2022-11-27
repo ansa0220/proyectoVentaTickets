@@ -28,6 +28,7 @@ def mostrar_eventos():
     eventos = ["Evento 1", "Evento 2", "Evento 3"]
     for evento in eventos:
         print(evento)
+    main()
     
 def mostrar_eventos_por_fechas():
     eventos = ["Evento 1", "Evento 2", "Evento 3"]
