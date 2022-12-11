@@ -98,6 +98,39 @@ asiento = Table(
     Column('id_lugar', Integer, ForeignKey("lugar.id_lugar"), primary_key = True)
 )
 
+punto_venta = Table(
+    'punto_venta', meta,
+    Column('id_pdv', Integer, primary_key = True),
+    Column('nombre', String),
+    Column('direccion', String),
+    Column('tipo', String)
+)
+
+
+factura = Table(
+    'factura', meta,
+    Column('id_factura', Integer, primary_key = True),
+    Column('fecha', Date),
+    Column('descripcion', String),
+    Column('total', Integer),
+    Column('forma_pago', String),
+    Column('id_pdv', Integer, ForeignKey("punto_venta.id_pdv")),
+    Column('usuario', String, ForeignKey("cliente.usuario"))
+)
+
+ticket = Table(
+    'ticket', meta,
+    Column('codigo_barra', Integer, primary_key = True),
+    Column('precio_unitario', Integer),
+    Column('id_show', Integer, ForeignKey("show.id_show")),
+    Column('id_asiento', Integer, ForeignKey("asiento.id_asiento")),
+    Column('id_pdv', Integer, ForeignKey("punto_venta.id_pdv")),
+    Column('usuario', String, ForeignKey("cliente.usuario")),
+    Column('id_factura', Integer, ForeignKey("factura.id_factura")),
+    Column('estado', String)
+)
+
+
 
 # guarda todas las tablas
 meta.create_all(engine)
