@@ -13,7 +13,7 @@ conf ={
 
 
 def generate_engine(custom_db = None):
-	db_name = "" if custom_db is None else "/"+custom_db
+	db_name = "" if custom_db is None else custom_db
 	engine = create_engine( f"mysql+pymysql://{conf['user']}:{conf['password']}@{conf['url']}{db_name}")
 	return engine
 
