@@ -1,6 +1,7 @@
 # proyectoVentaTickets
 Modelo Conceptual o E/R
-![modeloConceptual](https://user-images.githubusercontent.com/105894228/206920699-b1d4cd3a-6ee0-4260-a2f1-22d2c9ba139a.png)
+![modeloConceptual](https://user-images.githubusercontent.com/105894228/206931073-567d9b6b-565a-4113-931c-ece3e37f2bbb.png)
+
 
 Modelo Lógico o Schema
-![modeloLogico](https://user-images.githubusercontent.com/105894228/206920722-cc98bdb5-36c2-43d3-8868-763a9f2aabda.png)
+![modeloLogico](https://user-images.githubusercontent.com/105894228/206930910-6c62fd35-b32f-4717-bb09-1a3b6732a109.png)
