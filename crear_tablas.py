@@ -1,4 +1,4 @@
-from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey, Date, DateTime
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey, Date, Time
 meta = MetaData()
 
 from conexion import generate_engine,connect_or_create_database
@@ -48,7 +48,7 @@ evento = Table(
     'evento', meta,
     Column('id_evento', Integer, primary_key = True),
     Column('nombre', String),
-    Column('desripcion', String),
+    Column('descripcion', String),
     Column('imagen', String),
     Column('usuario', String, ForeignKey("usuario.usuario")),
     Column('RUC', String, ForeignKey("productor.RUC"), primary_key = True),
@@ -77,8 +77,8 @@ show = Table(
     'show', meta,
     Column('id_show', Integer, primary_key = True),
     Column('fecha', Date),
-    Column('hora_inicio', DateTime),
-    Column('hora_fin', DateTime),
+    Column('hora_inicio', Time),
+    Column('hora_fin', Time),
     Column('id_evento', Integer, ForeignKey("evento.id_evento"), primary_key = True),
     Column('id_lugar', Integer, ForeignKey("lugar.id_lugar"), primary_key = True)
 )
