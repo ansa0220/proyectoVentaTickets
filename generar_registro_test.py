@@ -67,16 +67,16 @@ with engine.connect() as conn:
     ])
 
     conn.execute(evento.insert(), [
-        {'id_evento': 34961, 'nombre': 'Bye Bye Tour-Guayaquil', 'descripcion': 'Kimberly Loaiza y Juan de Dios Pantoja anuncia su última gira juntos', 'imagen': 'imagen1.jpg', 'usuarioADM': '8760', 'usuarioPRO': '1205', 'fecha_registro': '2022-01-09'},
-        {'id_evento': 61475, 'nombre': 'Ecuador Padel Fest - Copa Kia', 'descripcion': 'El evento más importante de pádel en el Ecuador junto a Juan Lebrón, Charlie Moon y más', 'imagen': 'imagen2.jpg', 'usuarioADM': '9476', 'usuarioPRO': '9364', 'fecha_registro': '202-02-08'},
-        {'id_evento': 84091, 'nombre': 'Dinos Gye', 'descripcion': 'Viven Dinosaurios en Guayaquil', 'imagen': 'imagen3.jpg', 'usuarioADM': '6300', 'usuarioPRO': '1301', 'fecha_registro': '2022-03-07'},
-        {'id_evento': 62808, 'nombre': 'Camilo De Adentro Pa Afuera Tour', 'descripcion': 'Concierto de Camilo', 'imagen': 'imagen4.jpg', 'usuarioADM': '5977', 'usuarioPRO': '5819', 'fecha_registro': '2022-04-06'},
-        {'id_evento': 75010, 'nombre': 'Navidad de Cristal', 'descripcion': 'Celebración Fiesta de Navidad', 'imagen': 'imagen5.jpg', 'usuarioADM': '6268', 'usuarioPRO': '1633', 'fecha_registro': '2022-05-05'},
-        {'id_evento': 82160, 'nombre': 'La Última Vuelta World Tour Daddy Yankee Legendaddy', 'descripcion': 'Concierto de Daddy Yankee', 'imagen': 'imagen6.jpg', 'usuarioADM': '8760', 'usuarioPRO': '1205', 'fecha_registro': '2022-06-04'},
-        {'id_evento': 27820, 'nombre': 'Cristian Castro & Karina', 'descripcion': 'Concierto de Cristian Castro & Karina', 'imagen': 'imagen7.jpg', 'usuarioADM': '9476', 'usuarioPRO': '9364', 'fecha_registro': '2022-07-03'},
-        {'id_evento': 68878, 'nombre': 'Armeniazo Fest', 'descripcion': 'Festival de Armeniazo Fest', 'imagen': 'imagen8.jpg', 'usuarioADM': '6300', 'usuarioPRO': '1301', 'fecha_registro': '2022-08-02'},
-        {'id_evento': 13737, 'nombre': 'Covachazo', 'descripcion': 'Covachazo', 'imagen': 'imagen9.jpg', 'usuarioADM': '5977', 'usuarioPRO': '5819', 'fecha_registro': '2022-09-01'},
-        {'id_evento': 88750, 'nombre': 'Concierto de rap', 'descripcion': 'Concierto de rap', 'imagen': 'imagen10.jpg', 'usuarioADM': '6268', 'usuarioPRO': '1633', 'fecha_registro': '2022-09-30'}
+        {'id_evento': 34961, 'nombre': 'Bye Bye Tour-Guayaquil', 'descripcion': 'Kimberly Loaiza y Juan de Dios Pantoja anuncia su última gira juntos', 'imagen': 'imagen1.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2022-01-09'},
+        {'id_evento': 61475, 'nombre': 'Ecuador Padel Fest - Copa Kia', 'descripcion': 'El evento más importante de pádel en el Ecuador junto a Juan Lebrón, Charlie Moon y más', 'imagen': 'imagen2.jpg', 'usuarioAdm': '9476', 'usuarioPro': '9364', 'fecha_registro': '202-02-08'},
+        {'id_evento': 84091, 'nombre': 'Dinos Gye', 'descripcion': 'Viven Dinosaurios en Guayaquil', 'imagen': 'imagen3.jpg', 'usuarioAdm': '6300', 'usuarioPro': '1301', 'fecha_registro': '2022-03-07'},
+        {'id_evento': 62808, 'nombre': 'Camilo De Adentro Pa Afuera Tour', 'descripcion': 'Concierto de Camilo', 'imagen': 'imagen4.jpg', 'usuarioAdm': '5977', 'usuarioPro': '5819', 'fecha_registro': '2022-04-06'},
+        {'id_evento': 75010, 'nombre': 'Navidad de Cristal', 'descripcion': 'Celebración Fiesta de Navidad', 'imagen': 'imagen5.jpg', 'usuarioAdm': '6268', 'usuarioPro': '1633', 'fecha_registro': '2022-05-05'},
+        {'id_evento': 82160, 'nombre': 'La Última Vuelta World Tour Daddy Yankee Legendaddy', 'descripcion': 'Concierto de Daddy Yankee', 'imagen': 'imagen6.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2022-06-04'},
+        {'id_evento': 27820, 'nombre': 'Cristian Castro & Karina', 'descripcion': 'Concierto de Cristian Castro & Karina', 'imagen': 'imagen7.jpg', 'usuarioAdm': '9476', 'usuarioPro': '9364', 'fecha_registro': '2022-07-03'},
+        {'id_evento': 68878, 'nombre': 'Armeniazo Fest', 'descripcion': 'Festival de Armeniazo Fest', 'imagen': 'imagen8.jpg', 'usuarioAdm': '6300', 'usuarioPro': '1301', 'fecha_registro': '2022-08-02'},
+        {'id_evento': 13737, 'nombre': 'Covachazo', 'descripcion': 'Covachazo', 'imagen': 'imagen9.jpg', 'usuarioAdm': '5977', 'usuarioPro': '5819', 'fecha_registro': '2022-09-01'},
+        {'id_evento': 88750, 'nombre': 'Concierto de rap', 'descripcion': 'Concierto de rap', 'imagen': 'imagen10.jpg', 'usuarioAdm': '6268', 'usuarioPro': '1633', 'fecha_registro': '2022-09-30'}
     ])
 
 
