@@ -19,5 +19,11 @@ def clear():
         _ = os.system('clear')
 clear()
 with engine.connect() as conn:
+    print("# Consultar registros de la tabla ticket")
     result = conn.execute("SELECT * FROM ticket WHERE id_pdv = 3").mappings().all()
+    pprint(result)
+
+    print("# Obtener el total de las ventas en tickets")
+
+    result = conn.execute("SELECT SUM(precio_unitario) FROM ticket").mappings().all()
     pprint(result)
