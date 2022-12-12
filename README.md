@@ -4,5 +4,4 @@ Modelo Conceptual o E/R
 
 
 Modelo Lógico o Schema
-![modeloLogico](https://user-images.githubusercontent.com/105894228/206940671-f390aa71-167c-4d92-81f7-2acf07ee5d06.png)
-
+![modeloLogico](https://user-images.githubusercontent.com/105894228/206954932-f548283b-8fa8-451f-805f-00ddb94c1967.png)
