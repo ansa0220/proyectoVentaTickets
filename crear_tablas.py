@@ -50,8 +50,8 @@ evento = Table(
     Column('nombre', String),
     Column('descripcion', String),
     Column('imagen', String),
-    Column('usuario', String, ForeignKey("usuario.usuario")),
-    Column('RUC', String, ForeignKey("productor.RUC"), primary_key = True),
+    Column('usuarioAdm', String, ForeignKey("administrador.usuario")),
+    Column('usuarioPro', String, ForeignKey("productor.usuario"), primary_key = True),
     Column('fecha_registro', Date),
 )
 
