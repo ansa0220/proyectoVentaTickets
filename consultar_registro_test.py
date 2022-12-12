@@ -29,7 +29,7 @@ with engine.connect() as conn:
     result = conn.execute("SELECT SUM(precio_unitario) FROM ticket").mappings().all()
     pprint(result)
 
-    print("# Shows 2022")
+    print("# Nombre de los shows del 2022")
 
-    result = conn.execute("select * from evento join testnew.show on evento.id_evento = show.id_evento where year(fecha) = 2022 ").mappings().all()
+    result = conn.execute("select nombre from evento join testnew.show on evento.id_evento = show.id_evento where year(fecha) = 2022 ").mappings().all()
     pprint(result)
