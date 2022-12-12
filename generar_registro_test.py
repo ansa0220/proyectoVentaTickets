@@ -67,14 +67,14 @@ with engine.connect() as conn:
     ])
 
     conn.execute(evento.insert(), [
-        {'id_evento': 1, 'nombre': 'Concierto de rock', 'descripcion': 'Concierto de rock', 'imagen': 'rock.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 2, 'nombre': 'Concierto de salsa', 'descripcion': 'Concierto de salsa', 'imagen': 'salsa.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 3, 'nombre': 'Concierto de reggaeton', 'descripcion': 'Concierto de reggaeton', 'imagen': 'reggaeton.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 4, 'nombre': 'Concierto de cumbia', 'descripcion': 'Concierto de cumbia', 'imagen': 'cumbia.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 5, 'nombre': 'Concierto de merengue', 'descripcion': 'Concierto de merengue', 'imagen': 'merengue.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 6, 'nombre': 'Concierto de vallenato', 'descripcion': 'Concierto de vallenato', 'imagen': 'vallenato.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 7, 'nombre': 'Concierto de pop', 'descripcion': 'Concierto de pop', 'imagen': 'pop.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-20'},
-        {'id_evento': 8, 'nombre': 'Concierto de rap', 'descripcion': 'Concierto de rap', 'imagen': 'rap.jpg', 'usuario': 'productor', 'RUC': '0234567890', 'fecha_registro': '2019-05-20'},
+        {'id_evento': 1, 'nombre': 'Concierto de rock', 'descripcion': 'Concierto de rock', 'imagen': 'rock.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-01'},
+        {'id_evento': 2, 'nombre': 'Concierto de salsa', 'descripcion': 'Concierto de salsa', 'imagen': 'salsa.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-01'},
+        {'id_evento': 3, 'nombre': 'Concierto de reggaeton', 'descripcion': 'Concierto de reggaeton', 'imagen': 'reggaeton.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-01'},
+        {'id_evento': 4, 'nombre': 'Concierto de cumbia', 'descripcion': 'Concierto de cumbia', 'imagen': 'cumbia.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-01'},
+        {'id_evento': 5, 'nombre': 'Concierto de merengue', 'descripcion': 'Concierto de merengue', 'imagen': 'merengue.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-01'},
+        {'id_evento': 6, 'nombre': 'Concierto de vallenato', 'descripcion': 'Concierto de vallenato', 'imagen': 'vallenato.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-01'},
+        {'id_evento': 7, 'nombre': 'Concierto de pop', 'descripcion': 'Concierto de pop', 'imagen': 'pop.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-20'},
+        {'id_evento': 8, 'nombre': 'Concierto de rap', 'descripcion': 'Concierto de rap', 'imagen': 'rap.jpg', 'usuarioAdm': 'admin', 'usuarioPro': 'productor', 'fecha_registro': '2019-05-20'},
     ])
 
 
