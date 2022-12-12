@@ -207,3 +207,40 @@ with engine.connect() as conn:
         {'id_asiento': 56, 'fila': 1, 'numero': 86, 'id_zona': 29, 'id_lugar': 456}
         
     ])
+    conn.execute(ticket.insert(), [
+       {'codigo_barra': 117958, 'precio_unitario': 10, 'id_show': 39277, 'usuario': '2024', 'id_asiento': 1, 'num_factura': 5100, 'id_pdv': 1, 'estado': 'disponible'},
+       {'codigo_barra': 224235, 'precio_unitario': 20, 'id_show': 39277, 'usuario': '8825', 'id_asiento': 2, 'num_factura': 1006, 'id_pdv': 2, 'estado': 'disponible'},
+       {'codigo_barra': 523602, 'precio_unitario': 30, 'id_show': 65748, 'usuario': '8157', 'id_asiento': 11, 'num_factura': 5430, 'id_pdv': 3, 'estado': 'disponible'},
+       {'codigo_barra': 313666, 'precio_unitario': 40, 'id_show': 65748, 'usuario': '9218', 'id_asiento': 12, 'num_factura': 6581, 'id_pdv': 7, 'estado': 'disponible'},
+       {'codigo_barra': 607292, 'precio_unitario': 50, 'id_show': 29769, 'usuario': '1608', 'id_asiento': 19, 'num_factura': 8768, 'id_pdv': 6, 'estado': 'disponible'},
+       {'codigo_barra': 223329, 'precio_unitario': 60, 'id_show': 29769, 'usuario': '6948', 'id_asiento': 20, 'num_factura': 6231, 'id_pdv': 5, 'estado': 'disponible'},
+       {'codigo_barra': 620265, 'precio_unitario': 70, 'id_show': 41810, 'usuario': '1856', 'id_asiento': 43, 'num_factura': 6222, 'id_pdv': 4, 'estado': 'disponible'},
+       {'codigo_barra': 222585, 'precio_unitario': 80, 'id_show': 41810, 'usuario': '5169', 'id_asiento': 44, 'num_factura': 5323, 'id_pdv': 3, 'estado': 'disponible'},
+       {'codigo_barra': 752740, 'precio_unitario': 90, 'id_show': 26092, 'usuario': '7169', 'id_asiento': 52, 'num_factura': 9758, 'id_pdv': 2, 'estado': 'disponible'},
+       {'codigo_barra': 860628, 'precio_unitario': 100, 'id_show': 26092, 'usuario': '9983', 'id_asiento': 53, 'num_factura': 8822, 'id_pdv': 1, 'estado': 'disponible'}
+ 
+    ])
+    conn.execute(punto_venta.insert(), [
+       {'id_pdv': 1, 'nombre': 'TicketShow', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 2, 'nombre': 'BuenPlan', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 3, 'nombre': 'Ticketfacil', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 4, 'nombre': 'Smartticket', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 5, 'nombre': 'Instaticket', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 6, 'nombre': 'Centralticket', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 7, 'nombre': 'Feelthetickets', 'direccion': 'web', 'tipo': 'virtual'}
+        
+    ])
+    conn.execute(factura.insert(), [
+       {'num_factura': 5100, 'fecha': '2022-05-20', 'descripcion': 'venta de ticket para x evento', 'total': 100, 'forma_pago': 'debito', 'id_pdv': 1, 'usuario': '2024'},
+       {'num_factura': 1006, 'fecha': '2022-04-19', 'descripcion': 'venta de ticket para x evento', 'total': 100, 'forma_pago': 'debito', 'id_pdv': 2, 'usuario': '8825'},
+       {'num_factura': 5430, 'fecha': '2022-05-18', 'descripcion': 'venta de ticket para x evento', 'total': 100, 'forma_pago': 'debito', 'id_pdv': 3, 'usuario': '8157'},
+       {'num_factura': 6581, 'fecha': '2022-06-17', 'descripcion': 'venta de ticket para x evento', 'total': 30, 'forma_pago': 'debito', 'id_pdv': 7, 'usuario': '9218'},
+       {'num_factura': 8768, 'fecha': '2022-07-16', 'descripcion': 'venta de ticket para x evento', 'total': 30, 'forma_pago': 'debito', 'id_pdv': 6, 'usuario': '1608'},
+       {'num_factura': 6231, 'fecha': '2022-08-15', 'descripcion': 'venta de ticket para x evento', 'total': 90, 'forma_pago': 'debito', 'id_pdv': 5, 'usuario': '6948'},
+       {'num_factura': 6222, 'fecha': '2022-05-14', 'descripcion': 'venta de ticket para x evento', 'total': 100, 'forma_pago': 'debito', 'id_pdv': 4, 'usuario': '1856'},
+       {'num_factura': 5323, 'fecha': '2022-04-13', 'descripcion': 'venta de ticket para x evento', 'total': 1000, 'forma_pago': 'debito', 'id_pdv': 3, 'usuario': '5169'},
+       {'num_factura': 9758, 'fecha': '2022-06-12', 'descripcion': 'venta de ticket para x evento', 'total': 500, 'forma_pago': 'debito', 'id_pdv': 2, 'usuario': '7169'},
+       {'num_factura': 8822, 'fecha': '2022-07-11', 'descripcion': 'venta de ticket para x evento', 'total': 600, 'forma_pago': 'debito', 'id_pdv': 1, 'usuario': '9983'}
+       
+    ])
+     
