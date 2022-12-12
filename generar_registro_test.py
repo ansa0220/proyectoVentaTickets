@@ -83,24 +83,22 @@ with engine.connect() as conn:
 
     conn.execute(ciudad.insert(), [
         {'id_ciudad': 353, 'ciudad': 'Guayaquil'},
-        {'id_ciudad': 2, 'ciudad': 'Guayaquil'},
-        {'id_ciudad': 3, 'ciudad': 'Cuenca'},
-        {'id_ciudad': 4, 'ciudad': 'Manta'},
-        {'id_ciudad': 5, 'ciudad': 'Ambato'},
-        {'id_ciudad': 6, 'ciudad': 'Loja'},
-        {'id_ciudad': 7, 'ciudad': 'Ibarra'},
-        {'id_ciudad': 8, 'ciudad': 'Portoviejo'},
+        {'id_ciudad': 146, 'ciudad': 'Quito'},
+        {'id_ciudad': 207, 'ciudad': 'Manta'}
+       
     ])
     conn.execute(lugar.insert(), [
         {'id_lugar': 790, 'nombre': 'Voltaire Paladin Polo', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 353},
-        {'id_lugar': , 'nombre': 'Estadio Monumental Banco Pichincha', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 1},
-        {'id_lugar': 3, 'nombre': 'Estadio Monumental de Guayaquil', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 2},
-        {'id_lugar': 4, 'nombre': 'Estadio Alejandro Serrano Aguilar', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 3},
-        {'id_lugar': 5, 'nombre': 'Estadio Monumental de Manta', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 4},
-        {'id_lugar': 6, 'nombre': 'Estadio Monumental de Ambato', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 5},
-        {'id_lugar': 7, 'nombre': 'Estadio Monumental de Loja', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 6},
-        {'id_lugar': 8, 'nombre': 'Estadio Monumental de Ibarra', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 7},
-        {'id_lugar': 9, 'nombre': 'Estadio Monumental de Portoviejo', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 8},
+        {'id_lugar': 837, 'nombre': 'Rancho San Francisco - Quito', 'tipo': 'Rancho', 'descripcion': 'Rancho', 'id_ciudad': 146},
+        {'id_lugar': 772, 'nombre': 'Malecon 2000 - Guayaquil', 'tipo': 'Malecon 2000', 'descripcion': 'Malecon 2000', 'id_ciudad': 353},
+        {'id_lugar': 358, 'nombre': 'Coliseo General Rumiñahu', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 146},
+        {'id_lugar': 501, 'nombre': 'Teatro Principal Centro de Arte', 'tipo': 'Teatro', 'descripcion': 'Teatro Principal Centro de Arte', 'id_ciudad': 353},
+        {'id_lugar': 869, 'nombre': 'Estadio Modelo', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 353},
+        {'id_lugar': 839, 'nombre': 'Estadio Olimpico Atahualpa', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 146},
+        {'id_lugar': 419, 'nombre': 'Centro de Convenciones', 'tipo': 'Salon', 'descripcion': 'Centro de Convenciones', 'id_ciudad': 353},
+        {'id_lugar': 740, 'nombre': 'Complejo Deportivo Offside', 'tipo': 'Complejo', 'descripcion': 'Complejo Deportivo', 'id_ciudad': 146},
+        {'id_lugar': 469, 'nombre': 'Centro de Convenciones Miami - El Labrador', 'tipo': 'Salon', 'descripcion': 'Centro de Convenciones Miami', 'id_ciudad': 146},
+        {'id_lugar': 156, 'nombre': 'Mall del Pacifico', 'tipo': 'Centro comercial', 'descripcion': 'Mall del Pacifico', 'id_ciudad': 207},
     ])
     conn.execute(zona.insert(), [
         {'id_zona': 1, 'zona': 'General'},
@@ -112,15 +110,17 @@ with engine.connect() as conn:
     # show
     conn.execute(show.insert(), [
         {'id_show': 39277, 'id_evento': 34961, 'fecha': '2023-06-16', 'hora_inicio': '20:00:00', 'hora_fin': '12:00:00', 'id_lugar': 790},
-        {'id_show': 65748, 'id_evento': 2, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 75639, 'id_evento': 3, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 29769, 'id_evento': 4, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 76784, 'id_evento': 5, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 66079, 'id_evento': 6, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 42475, 'id_evento': 7, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 41810, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 26092, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 68046, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1}
+        {'id_show': 65748, 'id_evento': 61475, 'fecha': '2022-12-19', 'hora_inicio': '19:00:00', 'hora_fin': '23:00:00', 'id_lugar': 837},
+        {'id_show': 75639, 'id_evento': 84091, 'fecha': '2022-10-06', 'hora_inicio': '11:00:00', 'hora_fin': '21:00:00', 'id_lugar': 772},
+        {'id_show': 29769, 'id_evento': 62808, 'fecha': '2023-03-18', 'hora_inicio': '20:00:00', 'hora_fin': '01:00:00', 'id_lugar': 358},
+        {'id_show': 76784, 'id_evento': 62808, 'fecha': '2023-03-19', 'hora_inicio': '20:00:00', 'hora_fin': '01:00:00', 'id_lugar': 790},
+        {'id_show': 66079, 'id_evento': 75010, 'fecha': '2022-12-17', 'hora_inicio': '17:00:00', 'hora_fin': '22:00:00', 'id_lugar': 501},
+        {'id_show': 42475, 'id_evento': 82160, 'fecha': '2022-10-04', 'hora_inicio': '20:00:00', 'hora_fin': '00:00:00', 'id_lugar': 869},
+        {'id_show': 41810, 'id_evento': 82160, 'fecha': '2022-10-05', 'hora_inicio': '20:00:00', 'hora_fin': '00:00:00', 'id_lugar': 839},
+        {'id_show': 26092, 'id_evento': 27820, 'fecha': '2022-12-16', 'hora_inicio': '20:00:00', 'hora_fin': '00:00:00', 'id_lugar': 419},
+        {'id_show': 68046, 'id_evento': 68878, 'fecha': '2022-12-02', 'hora_inicio': '20:00:00', 'hora_fin': '01:00:00', 'id_lugar': 740},
+        {'id_show': 40708, 'id_evento': 13737, 'fecha': '2022-12-03', 'hora_inicio': '18:00:00', 'hora_fin': '00:00:00', 'id_lugar': 469},
+        {'id_show': 95990, 'id_evento': 88750, 'fecha': '2022-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '00:00:00', 'id_lugar': 156}
     ])
     conn.execute(asiento.insert(), [
         {'id_asiento': 1, 'fila': 1, 'numero': 1, 'id_zona': 1, 'id_lugar': 1},
