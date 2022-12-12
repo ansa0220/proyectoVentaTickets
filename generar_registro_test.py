@@ -61,26 +61,28 @@ with engine.connect() as conn:
         {'usuario': '6948', 'cedula': '1700456518', 'nombres': 'RUBEN ADALBERTO', 'apellidos': 'GUALLE QUISAGUANO'},
         {'usuario': '1856', 'cedula': '1705779070', 'nombres': 'MARTHA DEL ROCIO', 'apellidos': 'RIVERA VELA'},
         {'usuario': '5169', 'cedula': '1704977592', 'nombres': 'MARTHA MARIA DE LOURDES', 'apellidos': 'OÑA RAMOS'},
-        {'usuario': '7169', 'cedula': '1100072550', 'nombres': 'HECTOR MINOS', 'apellidos': 'JIMENEZ ROMERO'},
+        {'usuario': '7164', 'cedula': '1100072550', 'nombres': 'HECTOR MINOS', 'apellidos': 'JIMENEZ ROMERO'},
         {'usuario': '9983', 'cedula': '1001402484', 'nombres': 'MARIA NELY', 'apellidos': 'TERAN VILLARREAL'}
         
     ])
 
     conn.execute(evento.insert(), [
-        {'id_evento': 1, 'nombre': 'Concierto de rock', 'descripcion': 'Concierto de rock', 'imagen': 'rock.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 2, 'nombre': 'Concierto de salsa', 'descripcion': 'Concierto de salsa', 'imagen': 'salsa.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 3, 'nombre': 'Concierto de reggaeton', 'descripcion': 'Concierto de reggaeton', 'imagen': 'reggaeton.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 4, 'nombre': 'Concierto de cumbia', 'descripcion': 'Concierto de cumbia', 'imagen': 'cumbia.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 5, 'nombre': 'Concierto de merengue', 'descripcion': 'Concierto de merengue', 'imagen': 'merengue.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 6, 'nombre': 'Concierto de vallenato', 'descripcion': 'Concierto de vallenato', 'imagen': 'vallenato.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-01'},
-        {'id_evento': 7, 'nombre': 'Concierto de pop', 'descripcion': 'Concierto de pop', 'imagen': 'pop.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-20'},
-        {'id_evento': 8, 'nombre': 'Concierto de rap', 'descripcion': 'Concierto de rap', 'imagen': 'rap.jpg', 'usuarioAdm': '8760', 'usuarioPro': '1205', 'fecha_registro': '2019-05-20'},
+        {'id_evento': 34961, 'nombre': 'Bye Bye Tour-Guayaquil', 'descripcion': 'Kimberly Loaiza y Juan de Dios Pantoja anuncia su última gira juntos', 'imagen': 'imagen1.jpg', 'usuarioADM': '8760', 'usuarioPRO': '1205', 'fecha_registro': '2022-01-09'},
+        {'id_evento': 61475, 'nombre': 'Ecuador Padel Fest - Copa Kia', 'descripcion': 'El evento más importante de pádel en el Ecuador junto a Juan Lebrón, Charlie Moon y más', 'imagen': 'imagen2.jpg', 'usuarioADM': '9476', 'usuarioPRO': '9364', 'fecha_registro': '202-02-08'},
+        {'id_evento': 84091, 'nombre': 'Dinos Gye', 'descripcion': 'Viven Dinosaurios en Guayaquil', 'imagen': 'imagen3.jpg', 'usuarioADM': '6300', 'usuarioPRO': '1301', 'fecha_registro': '2022-03-07'},
+        {'id_evento': 62808, 'nombre': 'Camilo De Adentro Pa Afuera Tour', 'descripcion': 'Concierto de Camilo', 'imagen': 'imagen4.jpg', 'usuarioADM': '5977', 'usuarioPRO': '5819', 'fecha_registro': '2022-04-06'},
+        {'id_evento': 75010, 'nombre': 'Navidad de Cristal', 'descripcion': 'Celebración Fiesta de Navidad', 'imagen': 'imagen5.jpg', 'usuarioADM': '6268', 'usuarioPRO': '1633', 'fecha_registro': '2022-05-05'},
+        {'id_evento': 82160, 'nombre': 'La Última Vuelta World Tour Daddy Yankee Legendaddy', 'descripcion': 'Concierto de Daddy Yankee', 'imagen': 'imagen6.jpg', 'usuarioADM': '8760', 'usuarioPRO': '1205', 'fecha_registro': '2022-06-04'},
+        {'id_evento': 27820, 'nombre': 'Cristian Castro & Karina', 'descripcion': 'Concierto de Cristian Castro & Karina', 'imagen': 'imagen7.jpg', 'usuarioADM': '9476', 'usuarioPRO': '9364', 'fecha_registro': '2022-07-03'},
+        {'id_evento': 68878, 'nombre': 'Armeniazo Fest', 'descripcion': 'Festival de Armeniazo Fest', 'imagen': 'imagen8.jpg', 'usuarioADM': '6300', 'usuarioPRO': '1301', 'fecha_registro': '2022-08-02'},
+        {'id_evento': 13737, 'nombre': 'Covachazo', 'descripcion': 'Covachazo', 'imagen': 'imagen9.jpg', 'usuarioADM': '5977', 'usuarioPRO': '5819', 'fecha_registro': '2022-09-01'},
+        {'id_evento': 88750, 'nombre': 'Concierto de rap', 'descripcion': 'Concierto de rap', 'imagen': 'imagen10.jpg', 'usuarioADM': '6268', 'usuarioPRO': '1633', 'fecha_registro': '2022-09-30'}
     ])
 
 
 
     conn.execute(ciudad.insert(), [
-        {'id_ciudad': 1, 'ciudad': 'Quito'},
+        {'id_ciudad': 353, 'ciudad': 'Guayaquil'},
         {'id_ciudad': 2, 'ciudad': 'Guayaquil'},
         {'id_ciudad': 3, 'ciudad': 'Cuenca'},
         {'id_ciudad': 4, 'ciudad': 'Manta'},
@@ -90,8 +92,8 @@ with engine.connect() as conn:
         {'id_ciudad': 8, 'ciudad': 'Portoviejo'},
     ])
     conn.execute(lugar.insert(), [
-        {'id_lugar': 1, 'nombre': 'Estadio Olímpico Atahualpa', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 1},
-        {'id_lugar': 2, 'nombre': 'Estadio Monumental Banco Pichincha', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 1},
+        {'id_lugar': 790, 'nombre': 'Voltaire Paladin Polo', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 353},
+        {'id_lugar': , 'nombre': 'Estadio Monumental Banco Pichincha', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 1},
         {'id_lugar': 3, 'nombre': 'Estadio Monumental de Guayaquil', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 2},
         {'id_lugar': 4, 'nombre': 'Estadio Alejandro Serrano Aguilar', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 3},
         {'id_lugar': 5, 'nombre': 'Estadio Monumental de Manta', 'tipo': 'Estadio', 'descripcion': 'Estadio de fútbol', 'id_ciudad': 4},
@@ -109,14 +111,16 @@ with engine.connect() as conn:
     
     # show
     conn.execute(show.insert(), [
-        {'id_show': 1, 'id_evento': 1, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 2, 'id_evento': 2, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 3, 'id_evento': 3, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 4, 'id_evento': 4, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 5, 'id_evento': 5, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 6, 'id_evento': 6, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 7, 'id_evento': 7, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
-        {'id_show': 8, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 39277, 'id_evento': 34961, 'fecha': '2023-06-16', 'hora_inicio': '20:00:00', 'hora_fin': '12:00:00', 'id_lugar': 790},
+        {'id_show': 65748, 'id_evento': 2, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 75639, 'id_evento': 3, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 29769, 'id_evento': 4, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 76784, 'id_evento': 5, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 66079, 'id_evento': 6, 'fecha': '2019-05-01', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 42475, 'id_evento': 7, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 41810, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 26092, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1},
+        {'id_show': 68046, 'id_evento': 8, 'fecha': '2019-05-20', 'hora_inicio': '20:00:00', 'hora_fin': '22:00:00', 'id_lugar': 1}
     ])
     conn.execute(asiento.insert(), [
         {'id_asiento': 1, 'fila': 1, 'numero': 1, 'id_zona': 1, 'id_lugar': 1},
