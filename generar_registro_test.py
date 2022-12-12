@@ -61,7 +61,7 @@ with engine.connect() as conn:
         {'usuario': '6948', 'cedula': '1700456518', 'nombres': 'RUBEN ADALBERTO', 'apellidos': 'GUALLE QUISAGUANO'},
         {'usuario': '1856', 'cedula': '1705779070', 'nombres': 'MARTHA DEL ROCIO', 'apellidos': 'RIVERA VELA'},
         {'usuario': '5169', 'cedula': '1704977592', 'nombres': 'MARTHA MARIA DE LOURDES', 'apellidos': 'OÑA RAMOS'},
-        {'usuario': '7164', 'cedula': '1100072550', 'nombres': 'HECTOR MINOS', 'apellidos': 'JIMENEZ ROMERO'},
+        {'usuario': '7169', 'cedula': '1100072550', 'nombres': 'HECTOR MINOS', 'apellidos': 'JIMENEZ ROMERO'},
         {'usuario': '9983', 'cedula': '1001402484', 'nombres': 'MARIA NELY', 'apellidos': 'TERAN VILLARREAL'}
         
     ])
