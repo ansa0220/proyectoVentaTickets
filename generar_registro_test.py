@@ -6,7 +6,7 @@ connect_or_create_database()
 
 engine = generate_engine("testNew")
 
-from crear_tablas import usuario, administrador, productor, cliente, evento, ciudad, show, zona, asiento, lugar
+from crear_tablas import usuario, administrador, productor, cliente, evento, ciudad, show, zona, asiento, lugar, ticket, punto_venta, factura
 
 # ingresa datos a todas las tablas
 with engine.connect() as conn:
@@ -204,9 +204,21 @@ with engine.connect() as conn:
         {'id_asiento': 53, 'fila': 1, 'numero': 86, 'id_zona': 23, 'id_lugar': 419},
         {'id_asiento': 54, 'fila': 1, 'numero': 92, 'id_zona': 20, 'id_lugar': 419},
         {'id_asiento': 55, 'fila': 1, 'numero': 39, 'id_zona': 29, 'id_lugar': 469},
-        {'id_asiento': 56, 'fila': 1, 'numero': 86, 'id_zona': 29, 'id_lugar': 456}
+        {'id_asiento': 56, 'fila': 1, 'numero': 86, 'id_zona': 29, 'id_lugar': 156}
         
     ])
+
+    conn.execute(punto_venta.insert(), [
+       {'id_pdv': 1, 'nombre': 'TicketShow', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 2, 'nombre': 'BuenPlan', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 3, 'nombre': 'Ticketfacil', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 4, 'nombre': 'Smartticket', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 5, 'nombre': 'Instaticket', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 6, 'nombre': 'Centralticket', 'direccion': 'web', 'tipo': 'virtual'},
+       {'id_pdv': 7, 'nombre': 'Feelthetickets', 'direccion': 'web', 'tipo': 'virtual'}
+        
+    ])
+
     conn.execute(ticket.insert(), [
        {'codigo_barra': 117958, 'precio_unitario': 10, 'id_show': 39277, 'usuario': '2024', 'id_asiento': 1, 'num_factura': 5100, 'id_pdv': 1, 'estado': 'disponible'},
        {'codigo_barra': 224235, 'precio_unitario': 20, 'id_show': 39277, 'usuario': '8825', 'id_asiento': 2, 'num_factura': 1006, 'id_pdv': 2, 'estado': 'disponible'},
@@ -220,16 +232,7 @@ with engine.connect() as conn:
        {'codigo_barra': 860628, 'precio_unitario': 100, 'id_show': 26092, 'usuario': '9983', 'id_asiento': 53, 'num_factura': 8822, 'id_pdv': 1, 'estado': 'disponible'}
  
     ])
-    conn.execute(punto_venta.insert(), [
-       {'id_pdv': 1, 'nombre': 'TicketShow', 'direccion': 'web', 'tipo': 'virtual'},
-       {'id_pdv': 2, 'nombre': 'BuenPlan', 'direccion': 'web', 'tipo': 'virtual'},
-       {'id_pdv': 3, 'nombre': 'Ticketfacil', 'direccion': 'web', 'tipo': 'virtual'},
-       {'id_pdv': 4, 'nombre': 'Smartticket', 'direccion': 'web', 'tipo': 'virtual'},
-       {'id_pdv': 5, 'nombre': 'Instaticket', 'direccion': 'web', 'tipo': 'virtual'},
-       {'id_pdv': 6, 'nombre': 'Centralticket', 'direccion': 'web', 'tipo': 'virtual'},
-       {'id_pdv': 7, 'nombre': 'Feelthetickets', 'direccion': 'web', 'tipo': 'virtual'}
-        
-    ])
+
     conn.execute(factura.insert(), [
        {'num_factura': 5100, 'fecha': '2022-05-20', 'descripcion': 'venta de ticket para x evento', 'total': 100, 'forma_pago': 'debito', 'id_pdv': 1, 'usuario': '2024'},
        {'num_factura': 1006, 'fecha': '2022-04-19', 'descripcion': 'venta de ticket para x evento', 'total': 100, 'forma_pago': 'debito', 'id_pdv': 2, 'usuario': '8825'},
