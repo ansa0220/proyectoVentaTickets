@@ -415,11 +415,11 @@ def insert():
     opcion = input('Opcion: ')
     if opcion == '1':
         id_usuario = input('id_usuario: ')
-        nombre = input('nombre: ')
-        apellido = input('apellido: ')
-        email = input('email: ')
+        correo = input('correo: ')
+        telefono = input('telefono: ')
+        password = input('password: ')
         direccion = input('direccion: ')
-        opciones[opcion](id_usuario,nombre,apellido,email,direccion)
+        opciones[opcion](id_usuario,correo,telefono,password,direccion)
     elif opcion == '2':
         id_lugar = input('id_lugar: ')
         nombre = input('nombre: ')
