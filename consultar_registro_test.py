@@ -33,3 +33,9 @@ with engine.connect() as conn:
 
     result = conn.execute("select nombre from evento join testnew.show on evento.id_evento = show.id_evento where year(fecha) = 2022 ").mappings().all()
     pprint(result)
+    
+    ###TRIGGERS
+    ###tr1
+    
+    
+    ###tr2
