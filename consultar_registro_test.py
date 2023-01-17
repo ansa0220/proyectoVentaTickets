@@ -75,3 +75,16 @@ select id_show as Show, nombre as Lugar, ciudad as Ciudad
 from show
 inner join lugar on show.id_lugar = lugar.id_lugar
 inner join ciudad on lugar.id_ciudad = ciudad.id_ciudad;
+
+###SP
+delimiter $$
+create procedure eventoinsert(id_eventoEvento, nombre, descripcion, imagen, usuarioAdam, usuarioPro, fecha_registro)
+begin
+	set @var = (select id_evento from evento where id_evento = id_eventoEvento);
+    if @var != nombreEvento then
+		insert into evento values (id_eventoEvento, nombre, descripcion, imagen, usuarioAdam, usuarioPro, fecha_registro);
+	else
+		signal sqlstate '02000' set message_text = 'evento ya existe'
+	end if;
+end $$
+delimiter ;
