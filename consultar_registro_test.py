@@ -78,13 +78,13 @@ inner join ciudad on lugar.id_ciudad = ciudad.id_ciudad;
 
 ###SP
 delimiter $$
-create procedure eventoinsert(id_eventoEvento, nombre, descripcion, imagen, usuarioAdam, usuarioPro, fecha_registro)
+create procedure eventoinsert(id_eventoEvento integer(10), nombre varchar(100), descripcion varchar(100), imagen varchar(100), usuarioAdam varchar(100), usuarioPro varchar(100), fecha_registro date)
 begin
 	set @var = (select id_evento from evento where id_evento = id_eventoEvento);
     if @var != nombreEvento then
 		insert into evento values (id_eventoEvento, nombre, descripcion, imagen, usuarioAdam, usuarioPro, fecha_registro);
 	else
-		signal sqlstate '02000' set message_text = 'evento ya existe'
+		signal sqlstate '02000' set message_text = 'evento ya existe';
 	end if;
 end $$
 delimiter ;
