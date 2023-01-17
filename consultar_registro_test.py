@@ -35,7 +35,17 @@ with engine.connect() as conn:
     pprint(result)
     
     ###TRIGGERS
-    ###tr1
-    
-    
-    ###tr2
+    result = com.execute("delimiter | create trigger tr1_lugar_show before insert on ciudad for each statement begin if new.ciudad is null then set new.ciudad = new.'ciudad desconocida'; elseif new ciudad is not null then set new.ciudad = new.ciudad; end | delimiter ;").mappings().all()
+     pprint(result)
+                         
+-- 2 triggers
+delimiter |
+create trigger tr2_cliente before insert on cliente
+	for each statement
+    begin
+		if new.nombres is null then
+			set new.nombres = new.'desconocido';
+		elseif new.nombres not is null then
+			set new.nombres = new.nombres;
+	end |
+delimiter ;
